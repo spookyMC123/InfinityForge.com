@@ -1,0 +1,239 @@
+/* RESET + GLOBAL */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Orbitron', sans-serif;
+  line-height: 1.6;
+  color: #fff;
+  background: linear-gradient(145deg, #0f0f1a, #1a0023);
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+/* HEADINGS + LOGO NEON EFFECT */
+h1, h2, h3, .logo {
+  text-shadow: 0 0 10px #bc13fe, 0 0 20px #bc13fe;
+}
+
+/* NAVIGATION */
+.navbar {
+  background: rgba(10, 0, 20, 0.9);
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #400080;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #bc13fe;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+  color: #ff00ff;
+  text-shadow: 0 0 5px #ff00ff;
+}
+
+/* HERO SECTION */
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+  background: linear-gradient(to right, #bc13fe, #3700ff);
+  color: white;
+  box-shadow: 0 0 30px #bc13fe;
+}
+
+.hero h1 {
+  font-size: 3em;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+}
+
+/* CTA BUTTON */
+.cta-btn {
+  background: #0a001a;
+  color: #ff00ff;
+  border: 2px solid #ff00ff;
+  padding: 12px 25px;
+  font-size: 1em;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+}
+
+.cta-btn:hover {
+  background: #ff00ff;
+  color: #0a001a;
+}
+
+/* ABOUT SECTION */
+.about {
+  padding: 80px 40px;
+  text-align: center;
+  background-color: rgba(15, 0, 30, 0.95);
+  box-shadow: inset 0 0 30px #500080;
+}
+
+/* SKILLS SECTION */
+.skills {
+  padding: 80px 40px;
+  background-color: rgba(15, 0, 30, 0.95);
+  box-shadow: inset 0 0 30px #500080;
+  text-align: center;
+}
+
+.skills-container {
+  max-width: 700px;
+  margin: 0 auto;
+  padding-top: 40px;
+}
+
+.skill-row {
+  margin-bottom: 25px;
+  text-align: left;
+}
+
+.skill-label {
+  margin-bottom: 6px;
+  font-weight: bold;
+  font-size: 1.1em;
+  color: #fff;
+}
+
+.skill-bar {
+  background: #1a1a2e;
+  border-radius: 30px;
+  overflow: hidden;
+  height: 25px;
+  position: relative;
+}
+
+.skill-fill {
+  height: 100%;
+  line-height: 25px;
+  padding-left: 15px;
+  font-size: 0.95em;
+  font-weight: 600;
+  color: #fff;
+  width: 0;
+  animation: growBar 2s ease forwards;
+  border-radius: 30px;
+  text-shadow: 0 0 5px #ff00ff;
+}
+
+/* Skill Fill Colors - Neon Bars */
+.skill-fill.html {
+  background: linear-gradient(90deg, #ff00ff, #d000ff);
+  width: 75%;
+}
+
+.skill-fill.css {
+  background: linear-gradient(90deg, #9400d3, #c000ff);
+  width: 65%;
+}
+
+.skill-fill.js {
+  background: linear-gradient(90deg, #7f00ff, #e100ff);
+  width: 70%;
+}
+
+.skill-fill.python {
+  background: linear-gradient(90deg, #6000a8, #ab00ff);
+  width: 60%;
+}
+
+@keyframes growBar {
+  from {
+    width: 0;
+  }
+  to {
+    width: inherit;
+  }
+}
+
+/* CONTACT SECTION */
+.contact {
+  padding: 80px 40px;
+  text-align: center;
+  background-color: rgba(15, 0, 30, 0.95);
+  box-shadow: inset 0 0 30px #500080;
+}
+
+.contact a {
+  color: #bc13fe;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2em;
+  text-shadow: 0 0 8px #bc13fe;
+}
+
+.contact a:hover {
+  text-decoration: underline;
+  color: #ff00ff;
+}
+
+/* FOOTER */
+.footer {
+  text-align: center;
+  padding: 30px;
+  background-color: #0a001a;
+  color: white;
+  border-top: 1px solid #3700ff;
+}
+
+/* ANIMATIONS */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 1s ease-out forwards;
+}
+
+.slide-up {
+  opacity: 0;
+  transform: translateY(60px);
+  animation: slideUp 1s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
